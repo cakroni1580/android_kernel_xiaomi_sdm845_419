@@ -199,12 +199,12 @@ ifeq ($(KBUILD_EXTMOD),)
 # Therefore we need to generate the header after prepare0 has been made, hence
 # this hack.
 prepare: vdso_prepare
+
 vdso_prepare: prepare0
 	$(Q)$(MAKE) $(build)=arch/arm64/kernel/vdso include/generated/vdso-offsets.h
 
 ifeq ($(CONFIG_COMPAT_VDSO),y)
-	$(Q)$(MAKE) $(build)=arch/arm64/kernel/vdso32 \
-		include/generated/vdso32-offsets.h
+	$(Q)$(MAKE) $(build)=arch/arm64/kernel/vdso32 include/generated/vdso32-offsets.h
 endif
 
 define archhelp
