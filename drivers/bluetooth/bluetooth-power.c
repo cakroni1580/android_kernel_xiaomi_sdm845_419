@@ -11,6 +11,7 @@
 
 #include <linux/init.h>
 #include <linux/module.h>
+#include "bt_qca.h"
 #include <linux/kernel.h>
 #include <linux/platform_device.h>
 #include <linux/rfkill.h>
